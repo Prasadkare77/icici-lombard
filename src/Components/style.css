@@ -1,0 +1,95 @@
+/* Navbar CSS Style */
+.navbar{
+    background: linear-gradient(to bottom, #fe7c00, #fe4b00); 
+    font-weight: 500;
+}
+#basic-nav-dropdown{
+    position: relative;
+    display: inline-block;
+    color: white;
+    padding-right: 20px;
+}
+#dropdownItem{
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+#dropdownItem:hover{
+    color:#ec6608;
+    margin-left: 2px;
+}
+
+/* Home Page Css Style */
+.main-banner-bg{
+    background: url('assets/homeAssets/main-banner-bg.jpg');
+}
+.banner-img{
+    margin-left: 370px;
+}
+
+/* Icon CSS Style */
+.iconContainer{
+    padding-right: 50px;
+    padding-bottom: 20px;
+    margin-left: 40px;
+    margin-top: -50px;
+    position: relative;
+    z-index: 1;
+}
+.carousels{
+    padding-bottom: 20px;
+    margin-left: 40px;
+    margin-top: -50px;
+    position: absolute;
+    z-index: 1;
+}
+.icons{
+    padding-right: 10px;
+    padding-bottom: 10px;
+    margin-top: -20px;
+    z-index: 1;
+    border: 0px;
+}
+.iconFormText{
+    margin-top: 30px;
+    padding-left: 30px;
+}
+label{
+    font-size: small;
+}
+.gotaNewVwhicle{
+    font-size: small;
+}
+.btn-quote{
+    margin-left: 30px;
+    background-color: #ec6608;
+    color: white;
+}
+.gotaNewVehicle{
+    font-size: small;
+}
+.recentQuote{
+    font-size: small;
+    margin-left: 640px;
+    font-weight: bold;
+    color: #ec6608;
+}
+
+/* Health Insurance Page CSS Style */
+.container1{
+    background-color: #182C61;
+}
+#portexipolicy{
+    color: #ec6608;
+}
+.cashBefit{
+    background-color: #3B3B98;
+}
+.cashlessHospital{
+    background-color: #182C61;
+}
+.befitCover{
+    background-color: #182C61;
+}
+
