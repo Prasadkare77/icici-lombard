@@ -4,6 +4,12 @@ import Container from 'react-bootstrap/esm/Container'
 import Nav from "react-bootstrap/Nav";
 import './style.css';
 
+//TabIcon
+import AllInclusive from './assets/healthInsurance/all-inclusive.svg'
+import Health from './assets/healthInsurance/health.svg'
+import HealthBooster from './assets/healthInsurance/health-booster.svg'
+import PersonalProtect from './assets/healthInsurance/personal-protect.svg'
+
 function HealthInsurance() {
     return (
         <div>
@@ -17,23 +23,23 @@ function HealthInsurance() {
                     <div className='border border-top-0 mb-5 ms-0 me-0 text-dark'>
                         <Nav justify variant="tabs" defaultActiveKey="/home">
                             <Nav.Item className='border border-top-0 pt-3 text-start' href="#">
-                                <div class="d-inline-block text-start active"><Nav.Link href="/"><h6>Comprehensive<br/> Health Insurance</h6></Nav.Link></div>
-                                <div class="d-inline-block ms-5"><img src="assets/all-cashless.png" class="img-thumbnail" alt="..."></img></div>
+                                <div className="d-inline-block text-start active"><Nav.Link className='text-dark' href="/"><h6>Comprehensive<br/> Health Insurance</h6></Nav.Link></div>
+                                <div class="d-inline-block ms-5"><img src={AllInclusive} class="img-thumbnail" alt="..."></img></div>
                                 <div class="ps-2 pe-2 text-start"><p class="desk-para">Cashless health care for mild sickness to hospitalisation</p></div>
                             </Nav.Item>
                             <Nav.Item className='border border-top-0 pt-3 text-start'> 
-                                <div class="d-inline-block text-start"><Nav.Link href="/"><h6>Health Advant Edge</h6></Nav.Link></div>
-                                <div class="d-inline-block ms-5"><img src="assets/all-cashless.png" class="img-thumbnail" alt="..."></img></div>
+                                <div className="d-inline-block text-start"><Nav.Link className='text-dark' href="/"><h6>Health Advant Edge</h6></Nav.Link></div>
+                                <div class="d-inline-block ms-3"><img src={Health} class="img-thumbnail" alt="..."></img></div>
                                 <div><p class="ps-2 pe-2 text-start">Comprehensive health policy</p></div>
                             </Nav.Item>
                             <Nav.Item className='border border-top-0 pt-3 text-start'>
-                                <div class="d-inline-block text-start"><Nav.Link href="/"><h6>Health Booster</h6></Nav.Link></div>
-                                <div class="d-inline-block ms-5"><img src="assets/all-cashless.png" class="img-thumbnail" alt="..."></img></div>
+                                <div className="d-inline-block text-start"><Nav.Link className='text-dark' href="/"><h6>Health Booster</h6></Nav.Link></div>
+                                <div class="d-inline-block ms-5"><img src={HealthBooster} class="img-thumbnail" alt="..."></img></div>
                                 <div><p class="ps-2 pe-2 text-start">Increase your existing cover value</p></div>
                             </Nav.Item>
                             <Nav.Item className='border border-top-0 pt-3 text-start'>
-                                <div class="d-inline-block text-start"><Nav.Link href="/"><h6>Personal Protect</h6></Nav.Link></div>
-                                <div class="d-inline-block ms-5"><img src="assets/all-cashless.png" class="img-thumbnail" alt="..."></img></div>
+                                <div className="d-inline-block text-start"><Nav.Link className='text-dark' href="/"><h6>Personal Protect</h6></Nav.Link></div>
+                                <div class="d-inline-block ms-5"><img src={PersonalProtect} class="img-thumbnail" alt="..."></img></div>
                                 <div><p class="ps-2 pe-2 text-start">Accident protection</p></div>
                             </Nav.Item>
                         </Nav>
