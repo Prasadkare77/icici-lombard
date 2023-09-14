@@ -41,9 +41,9 @@ const Home = () => {
         </div>
         <div className="iconContainer bg-light border rounded d-inline-block">
             <div className="icons ms-4">
-                <div className="carTab d-inline-block bg-light text-center">
+                <div className="carTab d-inline-block bg-light text-center active" href='#carForm'>
                     <div className="car border rounded ps-3 pe-3 pt-4 pb-3 d-block ">
-                        <img className="" src={Car} alt="" /> 
+                        <img className="" src={Car} alt="" href='#carFrom'/> 
                     </div>
                     <div>
                         <p className='d-block mt-3 d-block'>Car</p>
@@ -91,8 +91,8 @@ const Home = () => {
                 </div>
             </div>
             <hr/>
-            <div className='iconFormText bg-light d-inline-block'>
-                <form>
+            <div className='iconFormText bg-light d-inline-block' id='carFrom'>
+                <form >
                     <div className="carReg d-inline-block">
                         <label htmlFor="">Car registration no.<span className='text-danger'><sup>*</sup></span></label><br/>
                         <input class="border-bottom border-0 pt-3 pb-3 mb-3 rounded" type="text" placeholder='E.G. MH01DF5698' />

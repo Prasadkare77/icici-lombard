@@ -80,6 +80,13 @@ label{
 .container1{
     background-color: #182C61;
 }
+.Comprehensive,.img-thumbnail{
+    border: none;
+}
+.minusBtn,.plusBtn{
+    font-weight: bold;
+    color: #ec6608;
+}
 #portexipolicy{
     color: #ec6608;
 }
@@ -92,4 +99,21 @@ label{
 .befitCover{
     background-color: #182C61;
 }
+.Cashless{
+    width:30 ;
+    height:15 ;
+    background: none;
+    border: none;
+}
+.Befitbanner{
+    width:30 ;
+    height:15 ;
+    background: none;
+    border: none;
+}
 
+
+/* Health Insurance Plan Page */
+.whiteContainer{
+    background-color: white;
+}

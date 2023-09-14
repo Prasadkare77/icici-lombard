@@ -18,7 +18,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 // Component
 import Home from "./Home";
 import HealthInsurance from "./HealthInsurance";
-
+import PlanPage from "./PlanPage";
 
 
 // const navBgColor={background: linear-gradient(to top, #ff512f, #f09819)};
@@ -107,6 +107,7 @@ const Index = () => {
         <Routes>
           <Route exact path="/" element={<Home/>}></Route>
           <Route exact path="/healthInsurance" element={<HealthInsurance />}></Route>
+          <Route exact path="/planPage" element={<PlanPage/>}></Route>
         </Routes>
       </Router>
     </div>
