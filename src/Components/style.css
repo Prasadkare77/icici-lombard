@@ -117,3 +117,19 @@ label{
 .whiteContainer{
     background-color: white;
 }
+.tabBackgd{
+    background: url('assets/healthInsurance/PlanPage/backgd.svg');
+    background-repeat: no-repeat;
+    overflow: hidden;
+    
+}
+.tabbg{
+    margin-left: 80px;
+    margin-top: 20px;
+}
+.basicc{
+    color: #3B3B98;
+}
+.infromus{
+    font-size: smaller;
+}
