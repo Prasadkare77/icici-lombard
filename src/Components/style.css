@@ -117,6 +117,10 @@ label{
 .whiteContainer{
     background-color: white;
 }
+.adultDetails{
+    margin-left: 1185px;
+    color: #182C61;
+}
 .leftSide{
     position: relative;
 }

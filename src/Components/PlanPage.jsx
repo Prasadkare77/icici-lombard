@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 import './style.css';
 
@@ -30,10 +31,19 @@ import Grouplg4 from './assets/healthInsurance/PlanPage/grouplg4.png'
 import Grouplg5 from './assets/healthInsurance/PlanPage/grouplg5.png'
 
 
+
 const PlanPage = () => {
+  const navigate = useNavigate()
+
+  const [adult,setAdult] = useState('');
+  const [date, setDate] = useState('')
   return (
     <div>
-      <div className='container1 pt-5 pb-5'>
+      <div className='container1 pt-4 pb-5'>
+        <div className='adultDetails text-primary mb-1'>
+          1 {adult}, Adult {adult} DOB: {date} <a className='editAdult' onClick={()=>navigate('')}>edit</a>
+          
+        </div>
         <div className='whiteContainer rounded ms-4 me-4 pb-5'>
           <div className='leftSide d-inline-block'>
             <div className='pt-4 ms-4 mb-2'>
