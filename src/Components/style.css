@@ -117,6 +117,12 @@ label{
 .whiteContainer{
     background-color: white;
 }
+.leftSide{
+    position: relative;
+}
+.rightSide{
+    position: absolute;
+}
 .tabBackgd{
     background: url('assets/healthInsurance/PlanPage/backgd.svg');
     background-repeat: no-repeat;

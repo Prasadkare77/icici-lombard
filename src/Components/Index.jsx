@@ -27,7 +27,7 @@ const Index = () => {
       <div>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
         <Router> 
-          <Navbar expand="lg" class="navbar bg-body-tertiary">
+          <Navbar expand="lg" className="navbar bg-body-tertiary">
             <Navbar.Brand href="/" className="ms-3 d-inline-block align-top">
               <img src={ilLogo} alt="ICICI" className="d-inline-block align-top"/>
             </Navbar.Brand>
@@ -35,7 +35,7 @@ const Index = () => {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="dropdown me-auto ms-4 text-light">
                 <NavDropdown title="Motor Insurance" id="basic-nav-dropdown" >
-                  <div class="dropdown-content">
+                  <div className="dropdown-content">
                     <div>
                       <NavDropdown.Item href="#action/3.1" id="dropdownItem">Motor Insurance</NavDropdown.Item>
                       <NavDropdown.Item href="#action/3.2" id="dropdownItem">Car Insurance</NavDropdown.Item>
@@ -100,7 +100,7 @@ const Index = () => {
               </Nav>
               
               <div className="me-4 text-light">
-                  <Nav.Link href="/">Login<i class="fa fa-angle-right ms-1 " aria-hidden="true"></i></Nav.Link>
+                  <Nav.Link href="/">Login<i className="fa fa-angle-right ms-1 " aria-hidden="true"></i></Nav.Link>
               </div>
             </Navbar.Collapse>
         </Navbar>

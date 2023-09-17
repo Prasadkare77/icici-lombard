@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import Container from 'react-bootstrap/esm/Container'
 
 // React Router DOM
@@ -23,11 +23,33 @@ import PlanPage from './PlanPage';
 
 
 function HealthInsurance() {
+
     const navigate = useNavigate()
-    const addAdult = ()=>{
+
+    const [adult, setAdult] = useState(0);
+    const [kids, setKids] = useState(0);
+
+    const [mobile,setMobile] = useState('')
+    const [email, setEmail] = useState('');
+    const [pinCode, setPincode] = useState('')
+
+    const handleSubmit = (e) => {
+        e.preventDefualt()
+        
+        navigate('/PlanPage')
     }
-    const onSubmit = () => {
-    
+
+    const addAdult = ()=>{
+        setAdult(1)
+    }
+    const removeAdult = () => {
+        setAdult(0);
+    }
+    const addKids = ()=>{
+        setKids(1)
+    }
+    const removeKids = () => {
+        setKids(0);
     }
 
     return (
@@ -42,34 +64,34 @@ function HealthInsurance() {
                 </div>
                 <div className='container-lg d-block bg-light rounded mt-4 mb-5'> 
 
-                    <div classNameName='border border-top-0 mb-5 ms-0 me-0 text-dark'>
+                    <div className='border border-top-0 mb-5 ms-0 me-0 text-dark'>
                         <Nav justify variant="tabs" defaultActiveKey="/home">
-                            <Nav.Link classNameName='border border-top-0 pt-3 text-start' href="#comphrensiveHealth">
+                            <Nav.Link className='border border-top-0 pt-3 text-start' href="#comphrensiveHealth">
                                 <Nav.Item >
-                                    <div classNameName="Comprehensive d-inline-block text-start active"><h6 classNameName='text-dark ms-3'>Comprehensive<br/> Health Insurance</h6></div>
+                                    <div className="Comprehensive d-inline-block text-start active"><h6 className='text-dark ms-3'>Comprehensive<br/> Health Insurance</h6></div>
                                     <div className="d-inline-block ms-5"><img src={AllInclusive} className="img-thumbnail" alt="..."></img></div>
-                                    <div className="ps-2 pe-2 text-start"><p classNameName="desk-para text-dark">Cashless health care for mild sickness to hospitalisation</p></div>
+                                    <div className="ps-2 pe-2 text-start"><p className="desk-para text-dark">Cashless health care for mild sickness to hospitalisation</p></div>
                                 </Nav.Item>
                             </Nav.Link>
-                            <Nav.Link classNameName='border border-top-0 pt-3 text-start' href="#comphrensiveHealth">
+                            <Nav.Link className='border border-top-0 pt-3 text-start' href="#comphrensiveHealth">
                                 <Nav.Item> 
-                                    <div classNameName="d-inline-block text-start"><h6 classNameName='text-dark ms-3'>Health Advant Edge</h6></div>
+                                    <div className="d-inline-block text-start"><h6 className='text-dark ms-3'>Health Advant Edge</h6></div>
                                     <div className="d-inline-block ms-3"><img src={Health} className="img-thumbnail" alt="..."></img></div>
-                                    <div className="ps-2 pe-2 text-start"><p classNameName="desk-para text-dark">Comprehensive health policy</p></div>
+                                    <div className="ps-2 pe-2 text-start"><p className="desk-para text-dark">Comprehensive health policy</p></div>
                                 </Nav.Item>
                             </Nav.Link> 
-                            <Nav.Link classNameName='border border-top-0 pt-3 text-start'>     
+                            <Nav.Link className='border border-top-0 pt-3 text-start'>     
                                 <Nav.Item >
-                                    <div classNameName="d-inline-block text-start"><h6 classNameName='text-dark'>Health Booster</h6></div>
+                                    <div className="d-inline-block text-start"><h6 className='text-dark'>Health Booster</h6></div>
                                     <div className="d-inline-block ms-5"><img src={HealthBooster} className="img-thumbnail" alt="..."></img></div>
-                                    <div className="ps-2 pe-2 text-start"><p classNameName="text-dark">Increase your existing cover value</p></div>
+                                    <div className="ps-2 pe-2 text-start"><p className="text-dark">Increase your existing cover value</p></div>
                                 </Nav.Item>
                             </Nav.Link>
-                            <Nav.Link classNameName='border border-top-0 pt-3 text-start'>
+                            <Nav.Link className='border border-top-0 pt-3 text-start'>
                                 <Nav.Item >
-                                    <div classNameName="d-inline-block text-start"><h6 classNameName='text-dark'>Personal Protect</h6></div>
+                                    <div className="d-inline-block text-start"><h6 className='text-dark'>Personal Protect</h6></div>
                                     <div className="d-inline-block ms-5"><img src={PersonalProtect} className="img-thumbnail" alt="..."></img></div>
-                                    <div className="ps-2 pe-2 text-start"><p classNameName="desk-para text-dark">Accident protection</p></div>
+                                    <div className="ps-2 pe-2 text-start"><p className="desk-para text-dark">Accident protection</p></div>
                                 </Nav.Item>
                             </Nav.Link>
                         </Nav>
@@ -78,23 +100,27 @@ function HealthInsurance() {
 
                     <div id="comphrensiveHealth">
                         <div className="ms-1 disabled" > 
-                            <div classNameName='border rounded p-3 ms-3 d-inline-block'>
+                            <div className='border rounded p-3 ms-3 d-inline-block'>
                                 <span className="AdultB"><strong>Adult(s)</strong></span>
                                 <span className="sm_f"> (21 years &amp; above)</span>
-                                <button classNameName="minusBtn bg-danger-subtle bg-opacity-25 border-0 rounded ms-5 me-3 ps-2 pe-2 text-secondary"><b>-</b></button>
-                                <span>0</span>
-                                <button classNameName="plusBtn bg-danger-subtle bg-opacity-25 border-0 rounded ms-3"><b>+</b></button>
+                                <button className="minusBtn bg-danger-subtle bg-opacity-25 border-0 rounded ms-5 me-3 ps-2 pe-2 text-secondary"
+                                    onClick={removeAdult}><b>-</b></button>
+                                <span>{adult}</span>
+                                <button className="plusBtn bg-danger-subtle bg-opacity-25 border-0 rounded ms-3" 
+                                    onClick={addAdult}><b>+</b></button>
                             </div>
-                            <div classNameName='border rounded p-3 ms-5 d-inline-block'>
+                            <div className='border rounded p-3 ms-5 d-inline-block'>
                                 <span className="AdultB"><strong>Kid(s)</strong></span>
                                 <span className="sm_f"> (3 months - 18 years) </span>
-                                <button className="bg-danger-subtle bg-opacity-25 border-0 rounded ms-5 me-3 ps-2 pe-2 text-secondary"><b>-</b></button>
-                                <span>0</span>
-                                <button className="bg-danger-subtle bg-opacity-25 border-0 rounded ms-3 text-danger "><b>+</b></button>
+                                <button className="bg-danger-subtle bg-opacity-25 border-0 rounded ms-5 me-3 ps-2 pe-2 text-secondary"
+                                    onClick={removeKids}><b>-</b></button>
+                                <span>{kids}</span>
+                                <button className="bg-danger-subtle bg-opacity-25 border-0 rounded ms-3 text-danger "
+                                    onClick={addKids}><b>+</b></button>
                             </div>
                         </div>
                         <div className="mt-4 ms-3">
-                            <form onSubmit={PlanPage.jsx}>
+                            <form onSubmit={handleSubmit}>
                                 <div className="d-inline-block me-5 input-block">
                                     <input className="border-bottom border-0 p-3 rounded" type="tel" placeholder='Mobile Number*' required></input>
                                 </div>
