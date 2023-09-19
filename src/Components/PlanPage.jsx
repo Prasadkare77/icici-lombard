@@ -37,6 +37,13 @@ const PlanPage = () => {
 
   const [adult,setAdult] = useState('');
   const [date, setDate] = useState('')
+
+  const [selectedValue, setSelectedValue] = useState('2');
+
+  const handleSelectChange = (e) => {
+    setSelectedValue(e.target.value); 
+  }
+
   return (
     <div>
       <div className='container1 pt-4 pb-5'>
@@ -192,18 +199,18 @@ const PlanPage = () => {
             <div className='border rounded p-2'>
               <div className='d-inline-block ms-4 mb-2'>
                 <span className=''>Sum insured (SI)</span>
-                <select className="form-select" aria-label="Default select example">
-                  <option>₹7,50,000</option>
-                  <option value="1" selected>₹10,00,000</option>
-                  <option value="1">₹10,00,000</option>
-                  <option value="1">₹15,00,000</option>
-                  <option value="1">₹20,00,000</option>
-                  <option value="1">₹25,00,000</option>
-                  <option value="1">₹30,00,000</option>
-                  <option value="1">₹40,00,000</option>
-                  <option value="1">₹50,00,000</option>
-                  <option value="1">₹75,00,000</option>
-                  <option value="1">₹1,00,00,000</option>
+                <select className="form-select" value={selectedValue} onChange={handleSelectChange} aria-label="Default select example">
+                  <option value="1">₹7,50,000</option>
+                  <option value="2">₹10,00,000</option>
+                  <option value="3">₹10,00,000</option>
+                  <option value="4">₹15,00,000</option>
+                  <option value="5">₹20,00,000</option>
+                  <option value="6">₹25,00,000</option>
+                  <option value="7">₹30,00,000</option>
+                  <option value="8">₹40,00,000</option>
+                  <option value="9">₹50,00,000</option>
+                  <option value="10">₹75,00,000</option>
+                  <option value="11">₹1,00,00,000</option>
                 </select>
               </div>
               <div className='d-inline-block ms-5'>

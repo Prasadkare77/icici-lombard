@@ -1,9 +1,10 @@
 import React, { Component, useState } from 'react'
 import Container from 'react-bootstrap/esm/Container'
 
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 // React Router DOM
 import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
-
 
 import Nav from "react-bootstrap/Nav";
 import './style.css';
@@ -16,7 +17,8 @@ import PersonalProtect from './assets/healthInsurance/personal-protect.svg'
 
 import Cashless from './assets/healthInsurance/cashlesshospitalmob_landing.png'
 import Befitbanner from './assets/healthInsurance/befitbannermobile.png'
-import { Form } from 'react-bootstrap/Form';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
 
 import PlanPage from './PlanPage';
@@ -29,21 +31,17 @@ function HealthInsurance() {
     const [adult, setAdult] = useState(0);
     const [kids, setKids] = useState(0);
 
-    const [mobile,setMobile] = useState('')
-    const [email, setEmail] = useState('');
-    const [pinCode, setPincode] = useState('')
-
-    const handleSubmit = (e) => {
-        e.preventDefualt()
-        
-        navigate('/PlanPage')
-    }
-
     const addAdult = ()=>{
         setAdult(1)
+        if(adult==1){
+            setAdult(adult+1)
+        }
     }
     const removeAdult = () => {
         setAdult(0);
+        if(adult==2){
+            setAdult(1)
+        }
     }
     const addKids = ()=>{
         setKids(1)
@@ -51,6 +49,17 @@ function HealthInsurance() {
     const removeKids = () => {
         setKids(0);
     }
+
+    const [mobile,setMobile] = useState('');
+    const [email, setEmail] = useState('');
+    const [pinCode, setPincode] = useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const adultData = {mobile,email,pinCode}
+        console.log(adultData);
+        navigate('/PlanPage')
+    };
 
     return (
         <div>
@@ -120,20 +129,20 @@ function HealthInsurance() {
                             </div>
                         </div>
                         <div className="mt-4 ms-3">
-                            <form onSubmit={handleSubmit}>
+                            <Form onSubmit={handleSubmit}>
                                 <div className="d-inline-block me-5 input-block">
-                                    <input className="border-bottom border-0 p-3 rounded" type="tel" placeholder='Mobile Number*' required></input>
+                                    <input className="border-bottom border-0 p-3 rounded" type="tel" placeholder='Mobile Number*' value={mobile} onChange={(e)=>setMobile(e.target.value)}></input>
                                 </div>
                                 <div className="d-inline-block me-5">
-                                    <input className=" border-bottom border-0 p-3 rounded" type="email" placeholder='Email*' required></input>
+                                    <input className=" border-bottom border-0 p-3 rounded" type="email" placeholder='Email*' value={email} onChange={(e)=>setEmail(e.target.value)}></input>
                                 </div>
                                 <div className="d-inline-block me-5">
-                                    <input className="border-bottom border-0 p-3 rounded" type="text" placeholder='Pincode*' required></input>
+                                    <input className="border-bottom border-0 p-3 rounded" type="text" placeholder='Pincode*' value={pinCode} onChange={(e)=>setPincode(e.target.value)}></input>
                                 </div>
                                 <div className="d-inline-block ms-5">
-                                    <button type="submit" className="rounded-pill p-3 btn btn-secondary" onClick={()=>navigate('/PlanPage')}>Get Quote</button>
+                                    <button className="rounded-pill p-3 btn btn-secondary" type="submit" onClick={()=>navigate('/PlanPage')}>Get Quote</button>
                                 </div>
-                            </form>
+                            </Form>
                         </div>
                         <div className="d-block pt-3 ms-3">
                             <p>
@@ -182,7 +191,6 @@ function HealthInsurance() {
                     </div>
                 </div>
             </div>
-            
             
         </div>
     );

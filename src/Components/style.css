@@ -9,6 +9,9 @@
     color: white;
     padding-right: 20px;
 }
+.NavDropdown:hover {
+
+}
 #dropdownItem{
     font-weight: 500;
     margin-top: 10px;

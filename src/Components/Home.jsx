@@ -30,8 +30,8 @@ import Cyclone from './assets/homeAssets/Carousel/cyclone-biparjoy.jpg'
 const Home = () => {
   return (
     <div>
-      <div class="background">
-        <div class="main-banner-bg">
+      <div className="background">
+        <div className="main-banner-bg">
             <div className='d-inline-block ms-4'>
                 <h2>Over 4 crore customers have faith in<br/> us because we care.</h2>
             </div>
@@ -118,25 +118,25 @@ const Home = () => {
         
         <div className="carousels border rounded d-inline-block">
             <Carousel showArrows={true} showThumbs={false}>
-                <div id="carouselExample" class="carousel slide">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
+                <div id="carouselExample" className="carousel slide">
+                    <div className="carousel-inner">
+                        <div className="carousel-item active">
                             <img src={Abha} class="d-block w-100" alt="..."/>
                         </div>
-                        <div class="carousel-item">
-                        <img src={BannerSalam} class="d-block w-100" alt="..."/>
+                        <div className="carousel-item">
+                        <img src={BannerSalam} className="d-block w-100" alt="..."/>
                         </div>
-                        <div class="carousel-item">
-                        <img src={BimaBharosa} class="d-block w-100" alt="..."/>
+                        <div className="carousel-item">
+                        <img src={BimaBharosa} className="d-block w-100" alt="..."/>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
+                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
+                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Next</span>
                     </button>
                 </div>
             </Carousel>
