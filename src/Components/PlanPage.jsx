@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 import './style.css';
@@ -30,8 +30,6 @@ import Grouplg3 from './assets/healthInsurance/PlanPage/grouplg3.png'
 import Grouplg4 from './assets/healthInsurance/PlanPage/grouplg4.png'
 import Grouplg5 from './assets/healthInsurance/PlanPage/grouplg5.png'
 
-
-
 const PlanPage = () => {
   const navigate = useNavigate()
 
@@ -39,6 +37,7 @@ const PlanPage = () => {
   const [date, setDate] = useState('')
 
   const [selectedValue, setSelectedValue] = useState('2');
+
 
   const handleSelectChange = (e) => {
     setSelectedValue(e.target.value); 
@@ -48,7 +47,7 @@ const PlanPage = () => {
     <div>
       <div className='container1 pt-4 pb-5'>
         <div className='adultDetails text-primary mb-1'>
-          1 {adult}, Adult {adult} DOB: {date} <a className='editAdult' onClick={()=>navigate('')}>edit</a>
+          1 {adult}, Adult {adult} DOB: {date} <a className='editAdult' onClick={()=>navigate('/healthInsurance')}>edit</a>
           
         </div>
         <div className='whiteContainer rounded ms-4 me-4 pb-5'>
