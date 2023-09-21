@@ -25,7 +25,7 @@ import { AdultContext } from "./Store";
 
 // const navBgColor={background: linear-gradient(to top, #ff512f, #f09819)};
 const Index = () => {
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
     return (
       <div>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
@@ -48,7 +48,7 @@ const Index = () => {
                   </div>
                 </NavDropdown>
                 <NavDropdown title="Health Insurance" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="/healthInsurance" id="dropdownItem" onClick={()=>navigate('/healthInsurance')}>Health Insurance</NavDropdown.Item>
+                  <NavDropdown.Item href={"/healthInsurance"} id="dropdownItem">Health Insurance</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.2" id="dropdownItem">Health Advant Edge</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.3" id="dropdownItem">Health Booster</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.4" id="dropdownItem">Personal Protect</NavDropdown.Item>

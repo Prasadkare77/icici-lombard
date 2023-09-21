@@ -141,7 +141,7 @@ function HealthInsurance() {
                                         value={pinCode} onChange={(e)=>setPincode(e.target.value)} />
                                 </Form.Group>
                                 <Button className="rounded-pill ms-5 pt-3 pb-3 ps-4 pe-4 btn btn-secondary" variant="primary" type="submit"
-                                    onClick={()=>navigate('/planPage')}>
+                                    onSubmit={()=>navigate('/planPage')}>
                                     Get Quote
                                 </Button>
                             </Form>
